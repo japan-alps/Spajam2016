@@ -7,15 +7,29 @@
 //
 
 import UIKit
+import SocketIOClientSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var socket : SocketIOClient!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let url = NSURL(string: "http://ec2-54-199-182-211.ap-northeast-1.compute.amazonaws.com:3000")!
+        //let url = NSURL(string: "http://192.168.5.142:33333")!
+        socket = SocketIOClient(socketURL: url)
+        socket.on("connect") {data in
+            print("connected!")
+        }
+        
+        socket.on("disconnect"){ data in
+            print("disconnected!")
+        }
+        
+        socket.connect()
+        
         return true
     }
 

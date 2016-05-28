@@ -27,14 +27,14 @@
                                         <rect key="frame" x="370" y="253" width="200" height="73"/>
                                         <state key="normal" title="Button" image="groupin_button.png"/>
                                         <connections>
-                                            <segue destination="Ego-Qz-RXP" kind="show" id="Vat-Fj-U4d"/>
+                                            <action selector="joinGroupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dN-9D-QRA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLb-eQ-03f">
                                         <rect key="frame" x="96" y="253" width="200" height="73"/>
                                         <state key="normal" title="Button" image="groupmk_button.png"/>
                                         <connections>
-                                            <segue destination="gVG-wE-xi6" kind="show" id="k8E-cG-Aw4"/>
+                                            <action selector="makeGroupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wXG-md-Czz"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ニックネーム：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0F-C9-7Q2">
@@ -59,15 +59,23 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="joinGroupButton" destination="eaD-ZY-c7d" id="BP2-mO-0oE"/>
+                        <outlet property="makeGroupButton" destination="TLb-eQ-03f" id="4tJ-mu-YNC"/>
+                        <outlet property="nicknameTextField" destination="CCt-mA-9og" id="RI4-9r-yA6"/>
+                        <outlet property="sc" destination="epO-fM-ZuT" id="pDt-Oj-Zy0"/>
+                        <segue destination="gVG-wE-xi6" kind="show" identifier="MakeGroup" id="hXo-0p-du8"/>
+                        <segue destination="Ego-Qz-RXP" kind="show" id="6e7-zd-HIy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="324.5" y="376.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Join Group View Controller-->
         <scene sceneID="0JB-Rm-v7j">
             <objects>
-                <viewController id="Ego-Qz-RXP" sceneMemberID="viewController">
+                <viewController id="Ego-Qz-RXP" customClass="JoinGroupViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dfT-Lv-Qsx"/>
                         <viewControllerLayoutGuide type="bottom" id="Ibe-vd-DMZ"/>
@@ -110,6 +118,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="idTextField" destination="iNu-Mz-e3b" id="VRL-DY-qFv"/>
+                        <outlet property="sc" destination="jcq-V1-XMa" id="pNj-NQ-jrI"/>
                         <segue destination="NsL-YV-4ul" kind="show" id="o2s-Vc-Ibe"/>
                     </connections>
                 </viewController>
@@ -184,12 +194,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="soM-e5-u36" kind="show" id="EtO-7k-QFK"/>
+                        <segue destination="E7T-wz-1fr" kind="show" id="vxu-bq-5VB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgs-xr-ReY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879.5" y="376.5"/>
+            <point key="canvasLocation" x="1879.5" y="-454.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aQC-lZ-sLP">
@@ -241,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9z-Pe-oHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2702.5" y="376.5"/>
+            <point key="canvasLocation" x="2670.5" y="399.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wnl-6R-iWk">
@@ -392,10 +402,13 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="soM-e5-u36" kind="show" id="sli-Rv-bJU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tlu-6a-HTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5776.5" y="1061.5"/>
+            <point key="canvasLocation" x="1879.5" y="387.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vyr-ro-Vhm">
@@ -547,10 +560,10 @@
             </objects>
             <point key="canvasLocation" x="4240.5" y="376.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Question View Controller-->
         <scene sceneID="fJq-4G-moJ">
             <objects>
-                <viewController id="x2Q-ZC-uRr" sceneMemberID="viewController">
+                <viewController id="x2Q-ZC-uRr" customClass="CreateQuestionViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S89-yQ-i9j"/>
                         <viewControllerLayoutGuide type="bottom" id="Hv5-fA-g9W"/>
@@ -571,6 +584,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUC-pB-eI3">
                                         <rect key="frame" x="233" y="251" width="200" height="73"/>
                                         <state key="normal" title="Button" image="questionsend_button.png"/>
+                                        <connections>
+                                            <action selector="sendQuestion:" destination="x2Q-ZC-uRr" eventType="touchUpInside" id="Bme-Ad-JaT"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yg1-9X-LrB">
                                         <rect key="frame" x="162" y="85" width="394" height="128"/>
@@ -590,17 +606,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="soM-e5-u36" kind="showDetail" id="x0t-bq-j57"/>
+                        <outlet property="questionTextView" destination="Yg1-9X-LrB" id="qIh-W1-FYl"/>
+                        <outlet property="sc" destination="N5C-D9-Pdi" id="Ftt-3p-8L2"/>
+                        <segue destination="soM-e5-u36" kind="show" identifier="Questions" action="showDetailViewController:sender:" id="x0t-bq-j57"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Go9-f1-Wp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1102.5" y="1061.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Questions View Controller-->
         <scene sceneID="nRb-Sv-hEG">
             <objects>
-                <viewController id="soM-e5-u36" sceneMemberID="viewController">
+                <viewController id="soM-e5-u36" customClass="QuestionsViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bNc-Z7-034"/>
                         <viewControllerLayoutGuide type="bottom" id="lBJ-Ty-m7c"/>
@@ -625,6 +643,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="questionLabel" destination="EkK-1Z-ysU" id="DuZ-uD-DJy"/>
                         <segue destination="YuC-vS-GwV" kind="show" id="glC-Uk-anb"/>
                         <segue destination="xhY-sv-oos" kind="show" id="4Mb-32-ITC"/>
                     </connections>
@@ -703,10 +722,10 @@
             </objects>
             <point key="canvasLocation" x="2691.5" y="1061.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Make Group View Controller-->
         <scene sceneID="csh-tD-onF">
             <objects>
-                <viewController id="gVG-wE-xi6" sceneMemberID="viewController">
+                <viewController id="gVG-wE-xi6" customClass="MakeGroupViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="obt-2D-Vo7"/>
                         <viewControllerLayoutGuide type="bottom" id="fIn-Jc-Vxp"/>
@@ -721,6 +740,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey3-kH-ros">
                                 <rect key="frame" x="233" y="120" width="200" height="73"/>
                                 <state key="normal" title="Button" image="member_cut.png"/>
+                                <connections>
+                                    <action selector="deadlineMember:" destination="gVG-wE-xi6" eventType="touchUpInside" id="skH-ZQ-u0x"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xIQ-zf-mY2">
                                 <rect key="frame" x="195" y="267" width="84" height="110"/>
@@ -774,7 +796,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="x2Q-ZC-uRr" kind="show" id="LEw-i4-CEg"/>
+                        <outlet property="player1Label" destination="Nyl-I1-V1v" id="gdD-kx-fGY"/>
+                        <outlet property="player2Label" destination="fAd-BE-I91" id="GJm-Q8-HRb"/>
+                        <outlet property="player3Label" destination="hga-fs-AVu" id="RNP-Wm-mqE"/>
+                        <outlet property="player4Label" destination="m4y-SE-c1w" id="GPO-yD-Wjg"/>
+                        <outlet property="player5Label" destination="xJx-98-l4e" id="C7w-60-ebs"/>
+                        <segue destination="x2Q-ZC-uRr" kind="show" identifier="CreateQuestion" id="LEw-i4-CEg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ar5-y8-5PS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -800,6 +827,6 @@
         <image name="questionsend_button.png" width="892" height="304"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EtO-7k-QFK"/>
+        <segue reference="sli-Rv-bJU"/>
     </inferredMetricsTieBreakers>
 </document>

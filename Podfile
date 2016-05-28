@@ -8,6 +8,7 @@ target 'Spajam2016' do
   # Pods for Spajam2016
 
   pod 'ACEDrawingView'
+  pod 'Socket.IO-Client-Swift'
 
   target 'Spajam2016Tests' do
     inherit! :search_paths
