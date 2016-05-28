@@ -1,0 +1,6 @@
+framework module Pods_Spajam2016Tests {
+  umbrella header "Pods-Spajam2016Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
