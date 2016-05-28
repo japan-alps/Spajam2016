@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "22B93CB90E1942595CC9A9C1777686A0E2F86916",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "22B93CB90E1942595CC9A9C1777686A0E2F86916" : 0,
+    "D478212A125340D7FB8E8AF4C1973CAD25D64CE3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "54A48599-32D9-4DD0-838F-92F5E3555A0C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "22B93CB90E1942595CC9A9C1777686A0E2F86916" : "Spajam2016\/",
+    "D478212A125340D7FB8E8AF4C1973CAD25D64CE3" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Spajam2016",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Spajam2016.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:japan-alps\/Spajam2016.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "22B93CB90E1942595CC9A9C1777686A0E2F86916"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tsukalab\/SpringVacationPresentation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D478212A125340D7FB8E8AF4C1973CAD25D64CE3"
+    }
+  ]
+}
