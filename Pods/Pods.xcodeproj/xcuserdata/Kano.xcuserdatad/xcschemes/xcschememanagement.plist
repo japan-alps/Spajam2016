@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ACEDrawingView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-Spajam2016.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-Spajam2016Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-Spajam2016UITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8FDE3E8C1EF2F31E18C90F3985F34B56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA1185942881B9649BA00E8BFF4C8C41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D94EA77AAF54AE19FE90CA79ACFF2719</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F23EF643357DE4902A2E6096F77BF758</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
