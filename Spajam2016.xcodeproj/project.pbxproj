@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D692B621CFA1E6800268782 /* WaitParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D692B611CFA1E6800268782 /* WaitParticipateViewController.swift */; };
+		0D692B641CFA1E9300268782 /* WaitQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D692B631CFA1E9300268782 /* WaitQuestionsViewController.swift */; };
+		0D692B661CFA20A400268782 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D692B651CFA20A400268782 /* DrawingViewController.swift */; };
+		0D692B681CFA20D600268782 /* MasterMonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D692B671CFA20D600268782 /* MasterMonitorViewController.swift */; };
+		0D692B6A1CFA25FA00268782 /* AnswerSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D692B691CFA25FA00268782 /* AnswerSelectViewController.swift */; };
+		0D692B6C1CFA261D00268782 /* PlayerWaitAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D692B6B1CFA261D00268782 /* PlayerWaitAnswerViewController.swift */; };
+		0D692B6E1CFA266000268782 /* CheckAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D692B6D1CFA266000268782 /* CheckAnswerViewController.swift */; };
 		0DC1F4F11CF9FC960049AFC6 /* batu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC1F4D41CF9FC960049AFC6 /* batu.png */; };
 		0DC1F4F21CF9FC960049AFC6 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC1F4D51CF9FC960049AFC6 /* clear.png */; };
 		0DC1F4F31CF9FC960049AFC6 /* eraser.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC1F4D61CF9FC960049AFC6 /* eraser.png */; };
@@ -71,6 +78,13 @@
 
 /* Begin PBXFileReference section */
 		08FE4CCF51AD120C21FBA8E9 /* Pods_Spajam2016UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spajam2016UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D692B611CFA1E6800268782 /* WaitParticipateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitParticipateViewController.swift; sourceTree = "<group>"; };
+		0D692B631CFA1E9300268782 /* WaitQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitQuestionsViewController.swift; sourceTree = "<group>"; };
+		0D692B651CFA20A400268782 /* DrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		0D692B671CFA20D600268782 /* MasterMonitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterMonitorViewController.swift; sourceTree = "<group>"; };
+		0D692B691CFA25FA00268782 /* AnswerSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerSelectViewController.swift; sourceTree = "<group>"; };
+		0D692B6B1CFA261D00268782 /* PlayerWaitAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerWaitAnswerViewController.swift; sourceTree = "<group>"; };
+		0D692B6D1CFA266000268782 /* CheckAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAnswerViewController.swift; sourceTree = "<group>"; };
 		0DC1F4D41CF9FC960049AFC6 /* batu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batu.png; sourceTree = "<group>"; };
 		0DC1F4D51CF9FC960049AFC6 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
 		0DC1F4D61CF9FC960049AFC6 /* eraser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser.png; sourceTree = "<group>"; };
@@ -244,12 +258,19 @@
 				8FCA1F8C1CF991F10066DE69 /* HomeViewController.swift */,
 				0DC1F50E1CFA02970049AFC6 /* MakeGroupViewController.swift */,
 				0DC1F5101CFA02C20049AFC6 /* JoinGroupViewController.swift */,
+				0D692B6B1CFA261D00268782 /* PlayerWaitAnswerViewController.swift */,
 				0DC1F5121CFA0AF80049AFC6 /* CreateQuestionViewController.swift */,
 				0DC1F5141CFA0EC20049AFC6 /* QuestionsViewController.swift */,
+				0D692B611CFA1E6800268782 /* WaitParticipateViewController.swift */,
+				0D692B631CFA1E9300268782 /* WaitQuestionsViewController.swift */,
+				0D692B651CFA20A400268782 /* DrawingViewController.swift */,
+				0D692B671CFA20D600268782 /* MasterMonitorViewController.swift */,
+				0D692B6D1CFA266000268782 /* CheckAnswerViewController.swift */,
 				8FCA1F8E1CF991F10066DE69 /* Main.storyboard */,
 				8FCA1F911CF991F10066DE69 /* Assets.xcassets */,
 				8FCA1F931CF991F10066DE69 /* LaunchScreen.storyboard */,
 				8FCA1F961CF991F10066DE69 /* Info.plist */,
+				0D692B691CFA25FA00268782 /* AnswerSelectViewController.swift */,
 			);
 			path = Spajam2016;
 			sourceTree = "<group>";
@@ -563,10 +584,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D692B6C1CFA261D00268782 /* PlayerWaitAnswerViewController.swift in Sources */,
+				0D692B6E1CFA266000268782 /* CheckAnswerViewController.swift in Sources */,
 				0DC1F5111CFA02C20049AFC6 /* JoinGroupViewController.swift in Sources */,
+				0D692B6A1CFA25FA00268782 /* AnswerSelectViewController.swift in Sources */,
+				0D692B641CFA1E9300268782 /* WaitQuestionsViewController.swift in Sources */,
 				0DC1F50F1CFA02970049AFC6 /* MakeGroupViewController.swift in Sources */,
 				0DC1F5151CFA0EC20049AFC6 /* QuestionsViewController.swift in Sources */,
+				0D692B661CFA20A400268782 /* DrawingViewController.swift in Sources */,
 				0DC1F5131CFA0AF80049AFC6 /* CreateQuestionViewController.swift in Sources */,
+				0D692B621CFA1E6800268782 /* WaitParticipateViewController.swift in Sources */,
+				0D692B681CFA20D600268782 /* MasterMonitorViewController.swift in Sources */,
 				8FCA1F8D1CF991F10066DE69 /* HomeViewController.swift in Sources */,
 				8FCA1F8B1CF991F10066DE69 /* AppDelegate.swift in Sources */,
 			);

@@ -23,12 +23,25 @@ class QuestionsViewController: UIViewController {
         socket = appDelegate.socket as SocketIOClient
         
         questionLabel.text = questionStr
+        
+        //タイマーを作る.
+        
+        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "changeView:", userInfo: nil, repeats: false)
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func changeView(){
+        performSegueWithIdentifier("MasterQuestions", sender: "")
+    }
+
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let viewController = segue.destinationViewController as! QuestionsViewController
     }
 
 

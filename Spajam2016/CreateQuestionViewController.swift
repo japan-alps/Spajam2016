@@ -45,7 +45,7 @@ class CreateQuestionViewController: UIViewController,UITextFieldDelegate,UIScrol
     
     @IBAction func sendQuestion(sender: AnyObject) {
         socket.emit("question_from_client",questionTextView.text!)
-      //  performSegueWithIdentifier("Questions", sender: sender)
+        performSegueWithIdentifier("MasterQuestions", sender: sender)
 
     }
     

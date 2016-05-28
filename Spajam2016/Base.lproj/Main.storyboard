@@ -90,6 +90,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWo-Rc-sEh">
                                         <rect key="frame" x="233" y="256" width="200" height="73"/>
                                         <state key="normal" title="Button" image="join.png"/>
+                                        <connections>
+                                            <action selector="joinGroup:" destination="Ego-Qz-RXP" eventType="touchUpInside" id="GJE-3a-V49"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IDを聞いて入力しよう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fF-SH-lCl">
                                         <rect key="frame" x="213" y="36" width="240" height="29"/>
@@ -119,6 +122,7 @@
                     </view>
                     <connections>
                         <outlet property="idTextField" destination="iNu-Mz-e3b" id="VRL-DY-qFv"/>
+                        <outlet property="joinGroup" destination="NWo-Rc-sEh" id="8LX-FZ-mcb"/>
                         <outlet property="sc" destination="jcq-V1-XMa" id="pNj-NQ-jrI"/>
                         <segue destination="NsL-YV-4ul" kind="show" id="o2s-Vc-Ibe"/>
                     </connections>
@@ -127,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="1102.5" y="376.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Wait Participate View Controller-->
         <scene sceneID="Ifm-OH-CCk">
             <objects>
-                <viewController id="NsL-YV-4ul" sceneMemberID="viewController">
+                <viewController id="NsL-YV-4ul" customClass="WaitParticipateViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aEI-7w-KHE"/>
                         <viewControllerLayoutGuide type="bottom" id="UVw-ns-059"/>
@@ -199,12 +203,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgs-xr-ReY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879.5" y="-454.5"/>
+            <point key="canvasLocation" x="1893.5" y="-248.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Drawing View Controller-->
         <scene sceneID="aQC-lZ-sLP">
             <objects>
-                <viewController id="xhY-sv-oos" sceneMemberID="viewController">
+                <viewController id="xhY-sv-oos" customClass="DrawingViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="do4-wu-ejC"/>
                         <viewControllerLayoutGuide type="bottom" id="Paa-DH-o1j"/>
@@ -213,7 +217,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gv1-qy-Im6">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gv1-qy-Im6" customClass="ACEDrawingView">
                                 <rect key="frame" x="20" y="40" width="627" height="267"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -233,30 +237,46 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIE-L7-W53">
-                                <rect key="frame" x="177" y="328" width="38" height="38"/>
-                                <state key="normal" image="clear.png"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqn-aC-RuS">
                                 <rect key="frame" x="20" y="326" width="40" height="40"/>
                                 <state key="normal" title="Button" image="pen.png"/>
+                                <connections>
+                                    <action selector="penAction:" destination="xhY-sv-oos" eventType="touchUpInside" id="4tF-n1-iNH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caV-UK-PiU">
                                 <rect key="frame" x="102" y="331" width="33" height="33"/>
                                 <state key="normal" title="Button" image="eraser.png"/>
+                                <connections>
+                                    <action selector="eraserAction:" destination="xhY-sv-oos" eventType="touchUpInside" id="mxn-qe-JN6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIE-L7-W53">
+                                <rect key="frame" x="177" y="328" width="38" height="38"/>
+                                <state key="normal" image="clear.png"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="xhY-sv-oos" eventType="touchUpInside" id="z1T-ks-dAg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="drawingView" destination="Gv1-qy-Im6" id="osm-Gw-5oO"/>
+                        <outlet property="eraserButton" destination="caV-UK-PiU" id="7Jl-Mm-Dxd"/>
+                        <outlet property="penButton" destination="bqn-aC-RuS" id="2VZ-KO-l5i"/>
+                        <outlet property="resetButton" destination="EIE-L7-W53" id="UXf-aD-9tX"/>
+                        <segue destination="SXI-Cw-dGM" kind="show" id="jtX-kS-lsV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9z-Pe-oHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2670.5" y="399.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Player Wait Answer View Controller-->
         <scene sceneID="wnl-6R-iWk">
             <objects>
-                <viewController id="SXI-Cw-dGM" sceneMemberID="viewController">
+                <viewController id="SXI-Cw-dGM" customClass="PlayerWaitAnswerViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xIY-xH-Hf3"/>
                         <viewControllerLayoutGuide type="bottom" id="dmG-Bg-hWp"/>
@@ -314,15 +334,18 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="ieJ-NU-mgz" kind="showDetail" id="xie-Ry-4np"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXr-lc-tQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3472.5" y="1061.5"/>
+            <point key="canvasLocation" x="3440.5" y="399.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Wait Questions View Controller-->
         <scene sceneID="4DP-g7-916">
             <objects>
-                <viewController id="E7T-wz-1fr" sceneMemberID="viewController">
+                <viewController id="E7T-wz-1fr" customClass="WaitQuestionsViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3mt-kl-TF3"/>
                         <viewControllerLayoutGuide type="bottom" id="exi-Zd-lGv"/>
@@ -408,12 +431,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tlu-6a-HTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879.5" y="387.5"/>
+            <point key="canvasLocation" x="1893.5" y="355.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Check Answer View Controller-->
         <scene sceneID="vyr-ro-Vhm">
             <objects>
-                <viewController id="ieJ-NU-mgz" sceneMemberID="viewController">
+                <viewController id="ieJ-NU-mgz" customClass="CheckAnswerViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vMP-vE-4RV"/>
                         <viewControllerLayoutGuide type="bottom" id="396-nE-ohE"/>
@@ -486,12 +509,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JC3-pB-7uy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5016.5" y="1061.5"/>
+            <point key="canvasLocation" x="4300.5" y="757.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Answer Select View Controller-->
         <scene sceneID="9Fy-MJ-I8e">
             <objects>
-                <viewController id="e82-bR-Gp8" sceneMemberID="viewController">
+                <viewController id="e82-bR-Gp8" customClass="AnswerSelectViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ivr-ZF-mfc"/>
                         <viewControllerLayoutGuide type="bottom" id="KTJ-np-c8L"/>
@@ -555,10 +578,13 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="ieJ-NU-mgz" kind="show" id="CZp-Kf-tk0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2Q-QK-tqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4240.5" y="376.5"/>
+            <point key="canvasLocation" x="3440.5" y="1061.5"/>
         </scene>
         <!--Create Question View Controller-->
         <scene sceneID="fJq-4G-moJ">
@@ -608,7 +634,7 @@
                     <connections>
                         <outlet property="questionTextView" destination="Yg1-9X-LrB" id="qIh-W1-FYl"/>
                         <outlet property="sc" destination="N5C-D9-Pdi" id="Ftt-3p-8L2"/>
-                        <segue destination="soM-e5-u36" kind="show" identifier="Questions" action="showDetailViewController:sender:" id="x0t-bq-j57"/>
+                        <segue destination="soM-e5-u36" kind="show" identifier="MasterQuestions" action="showDetailViewController:sender:" id="x0t-bq-j57"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Go9-f1-Wp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -644,18 +670,18 @@
                     </view>
                     <connections>
                         <outlet property="questionLabel" destination="EkK-1Z-ysU" id="DuZ-uD-DJy"/>
-                        <segue destination="YuC-vS-GwV" kind="show" id="glC-Uk-anb"/>
+                        <segue destination="YuC-vS-GwV" kind="show" identifier="MasterMonitoring" id="glC-Uk-anb"/>
                         <segue destination="xhY-sv-oos" kind="show" id="4Mb-32-ITC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rw-7U-NH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879.5" y="1061.5"/>
+            <point key="canvasLocation" x="1893.5" y="1061.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Master Monitor View Controller-->
         <scene sceneID="bdt-Ks-Yyo">
             <objects>
-                <viewController id="YuC-vS-GwV" sceneMemberID="viewController">
+                <viewController id="YuC-vS-GwV" customClass="MasterMonitorViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8o6-Cg-C5z"/>
                         <viewControllerLayoutGuide type="bottom" id="GLj-7G-g4g"/>
@@ -717,10 +743,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="e82-bR-Gp8" kind="show" identifier="AnswerSelect" id="Alm-ej-6et"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdc-CL-gUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2691.5" y="1061.5"/>
+            <point key="canvasLocation" x="2670.5" y="1061.5"/>
         </scene>
         <!--Make Group View Controller-->
         <scene sceneID="csh-tD-onF">
@@ -828,5 +857,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sli-Rv-bJU"/>
+        <segue reference="xie-Ry-4np"/>
     </inferredMetricsTieBreakers>
 </document>

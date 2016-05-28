@@ -76,6 +76,16 @@ class JoinGroupViewController: UIViewController {
         return true
     }
     
+    @IBAction func joinGroup(sender: AnyObject) {
+        performSegueWithIdentifier("WaitParticipate", sender: sender)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let viewController = segue.destinationViewController as! CreateQuestionViewController
+        
+    }
+    
     
     /*
     // MARK: - Navigation
