@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FCA1F8B1CF991F10066DE69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA1F8A1CF991F10066DE69 /* AppDelegate.swift */; };
+		8FCA1F8D1CF991F10066DE69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA1F8C1CF991F10066DE69 /* ViewController.swift */; };
+		8FCA1F901CF991F10066DE69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1F8E1CF991F10066DE69 /* Main.storyboard */; };
+		8FCA1F921CF991F10066DE69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1F911CF991F10066DE69 /* Assets.xcassets */; };
+		8FCA1F951CF991F10066DE69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1F931CF991F10066DE69 /* LaunchScreen.storyboard */; };
+		8FCA1FA01CF991F10066DE69 /* Spajam2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA1F9F1CF991F10066DE69 /* Spajam2016Tests.swift */; };
+		8FCA1FAB1CF991F10066DE69 /* Spajam2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA1FAA1CF991F10066DE69 /* Spajam2016UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FCA1F9C1CF991F10066DE69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FCA1F7F1CF991F10066DE69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FCA1F861CF991F10066DE69;
+			remoteInfo = Spajam2016;
+		};
+		8FCA1FA71CF991F10066DE69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FCA1F7F1CF991F10066DE69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FCA1F861CF991F10066DE69;
+			remoteInfo = Spajam2016;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8FCA1F871CF991F10066DE69 /* Spajam2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spajam2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FCA1F8A1CF991F10066DE69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8FCA1F8C1CF991F10066DE69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FCA1F8F1CF991F10066DE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8FCA1F911CF991F10066DE69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FCA1F941CF991F10066DE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FCA1F961CF991F10066DE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FCA1F9B1CF991F10066DE69 /* Spajam2016Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spajam2016Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FCA1F9F1CF991F10066DE69 /* Spajam2016Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spajam2016Tests.swift; sourceTree = "<group>"; };
+		8FCA1FA11CF991F10066DE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FCA1FA61CF991F10066DE69 /* Spajam2016UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spajam2016UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FCA1FAA1CF991F10066DE69 /* Spajam2016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spajam2016UITests.swift; sourceTree = "<group>"; };
+		8FCA1FAC1CF991F10066DE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FCA1F841CF991F10066DE69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCA1F981CF991F10066DE69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCA1FA31CF991F10066DE69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FCA1F7E1CF991F10066DE69 = {
+			isa = PBXGroup;
+			children = (
+				8FCA1F891CF991F10066DE69 /* Spajam2016 */,
+				8FCA1F9E1CF991F10066DE69 /* Spajam2016Tests */,
+				8FCA1FA91CF991F10066DE69 /* Spajam2016UITests */,
+				8FCA1F881CF991F10066DE69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FCA1F881CF991F10066DE69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FCA1F871CF991F10066DE69 /* Spajam2016.app */,
+				8FCA1F9B1CF991F10066DE69 /* Spajam2016Tests.xctest */,
+				8FCA1FA61CF991F10066DE69 /* Spajam2016UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FCA1F891CF991F10066DE69 /* Spajam2016 */ = {
+			isa = PBXGroup;
+			children = (
+				8FCA1F8A1CF991F10066DE69 /* AppDelegate.swift */,
+				8FCA1F8C1CF991F10066DE69 /* ViewController.swift */,
+				8FCA1F8E1CF991F10066DE69 /* Main.storyboard */,
+				8FCA1F911CF991F10066DE69 /* Assets.xcassets */,
+				8FCA1F931CF991F10066DE69 /* LaunchScreen.storyboard */,
+				8FCA1F961CF991F10066DE69 /* Info.plist */,
+			);
+			path = Spajam2016;
+			sourceTree = "<group>";
+		};
+		8FCA1F9E1CF991F10066DE69 /* Spajam2016Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8FCA1F9F1CF991F10066DE69 /* Spajam2016Tests.swift */,
+				8FCA1FA11CF991F10066DE69 /* Info.plist */,
+			);
+			path = Spajam2016Tests;
+			sourceTree = "<group>";
+		};
+		8FCA1FA91CF991F10066DE69 /* Spajam2016UITests */ = {
+			isa = PBXGroup;
+			children = (
+				8FCA1FAA1CF991F10066DE69 /* Spajam2016UITests.swift */,
+				8FCA1FAC1CF991F10066DE69 /* Info.plist */,
+			);
+			path = Spajam2016UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FCA1F861CF991F10066DE69 /* Spajam2016 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FCA1FAF1CF991F10066DE69 /* Build configuration list for PBXNativeTarget "Spajam2016" */;
+			buildPhases = (
+				8FCA1F831CF991F10066DE69 /* Sources */,
+				8FCA1F841CF991F10066DE69 /* Frameworks */,
+				8FCA1F851CF991F10066DE69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spajam2016;
+			productName = Spajam2016;
+			productReference = 8FCA1F871CF991F10066DE69 /* Spajam2016.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FCA1F9A1CF991F10066DE69 /* Spajam2016Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FCA1FB21CF991F10066DE69 /* Build configuration list for PBXNativeTarget "Spajam2016Tests" */;
+			buildPhases = (
+				8FCA1F971CF991F10066DE69 /* Sources */,
+				8FCA1F981CF991F10066DE69 /* Frameworks */,
+				8FCA1F991CF991F10066DE69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FCA1F9D1CF991F10066DE69 /* PBXTargetDependency */,
+			);
+			name = Spajam2016Tests;
+			productName = Spajam2016Tests;
+			productReference = 8FCA1F9B1CF991F10066DE69 /* Spajam2016Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8FCA1FA51CF991F10066DE69 /* Spajam2016UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FCA1FB51CF991F10066DE69 /* Build configuration list for PBXNativeTarget "Spajam2016UITests" */;
+			buildPhases = (
+				8FCA1FA21CF991F10066DE69 /* Sources */,
+				8FCA1FA31CF991F10066DE69 /* Frameworks */,
+				8FCA1FA41CF991F10066DE69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FCA1FA81CF991F10066DE69 /* PBXTargetDependency */,
+			);
+			name = Spajam2016UITests;
+			productName = Spajam2016UITests;
+			productReference = 8FCA1FA61CF991F10066DE69 /* Spajam2016UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FCA1F7F1CF991F10066DE69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "japan-alps";
+				TargetAttributes = {
+					8FCA1F861CF991F10066DE69 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					8FCA1F9A1CF991F10066DE69 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 8FCA1F861CF991F10066DE69;
+					};
+					8FCA1FA51CF991F10066DE69 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 8FCA1F861CF991F10066DE69;
+					};
+				};
+			};
+			buildConfigurationList = 8FCA1F821CF991F10066DE69 /* Build configuration list for PBXProject "Spajam2016" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FCA1F7E1CF991F10066DE69;
+			productRefGroup = 8FCA1F881CF991F10066DE69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FCA1F861CF991F10066DE69 /* Spajam2016 */,
+				8FCA1F9A1CF991F10066DE69 /* Spajam2016Tests */,
+				8FCA1FA51CF991F10066DE69 /* Spajam2016UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FCA1F851CF991F10066DE69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCA1F951CF991F10066DE69 /* LaunchScreen.storyboard in Resources */,
+				8FCA1F921CF991F10066DE69 /* Assets.xcassets in Resources */,
+				8FCA1F901CF991F10066DE69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCA1F991CF991F10066DE69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCA1FA41CF991F10066DE69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FCA1F831CF991F10066DE69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCA1F8D1CF991F10066DE69 /* ViewController.swift in Sources */,
+				8FCA1F8B1CF991F10066DE69 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCA1F971CF991F10066DE69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCA1FA01CF991F10066DE69 /* Spajam2016Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCA1FA21CF991F10066DE69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCA1FAB1CF991F10066DE69 /* Spajam2016UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FCA1F9D1CF991F10066DE69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FCA1F861CF991F10066DE69 /* Spajam2016 */;
+			targetProxy = 8FCA1F9C1CF991F10066DE69 /* PBXContainerItemProxy */;
+		};
+		8FCA1FA81CF991F10066DE69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FCA1F861CF991F10066DE69 /* Spajam2016 */;
+			targetProxy = 8FCA1FA71CF991F10066DE69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8FCA1F8E1CF991F10066DE69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FCA1F8F1CF991F10066DE69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8FCA1F931CF991F10066DE69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FCA1F941CF991F10066DE69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FCA1FAD1CF991F10066DE69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FCA1FAE1CF991F10066DE69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FCA1FB01CF991F10066DE69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Spajam2016/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "japan-alps.Spajam2016";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8FCA1FB11CF991F10066DE69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Spajam2016/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "japan-alps.Spajam2016";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8FCA1FB31CF991F10066DE69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Spajam2016Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "japan-alps.Spajam2016Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spajam2016.app/Spajam2016";
+			};
+			name = Debug;
+		};
+		8FCA1FB41CF991F10066DE69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Spajam2016Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "japan-alps.Spajam2016Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spajam2016.app/Spajam2016";
+			};
+			name = Release;
+		};
+		8FCA1FB61CF991F10066DE69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Spajam2016UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "japan-alps.Spajam2016UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Spajam2016;
+			};
+			name = Debug;
+		};
+		8FCA1FB71CF991F10066DE69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Spajam2016UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "japan-alps.Spajam2016UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Spajam2016;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FCA1F821CF991F10066DE69 /* Build configuration list for PBXProject "Spajam2016" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FCA1FAD1CF991F10066DE69 /* Debug */,
+				8FCA1FAE1CF991F10066DE69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FCA1FAF1CF991F10066DE69 /* Build configuration list for PBXNativeTarget "Spajam2016" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FCA1FB01CF991F10066DE69 /* Debug */,
+				8FCA1FB11CF991F10066DE69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8FCA1FB21CF991F10066DE69 /* Build configuration list for PBXNativeTarget "Spajam2016Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FCA1FB31CF991F10066DE69 /* Debug */,
+				8FCA1FB41CF991F10066DE69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8FCA1FB51CF991F10066DE69 /* Build configuration list for PBXNativeTarget "Spajam2016UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FCA1FB61CF991F10066DE69 /* Debug */,
+				8FCA1FB71CF991F10066DE69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FCA1F7F1CF991F10066DE69 /* Project object */;
+}
