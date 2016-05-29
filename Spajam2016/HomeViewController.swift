@@ -19,6 +19,7 @@ class HomeViewController: UIViewController,UITextFieldDelegate,UIScrollViewDeleg
     @IBOutlet var sc: UIScrollView!
     
     var socket : SocketIOClient!
+    var appDelegate : AppDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class HomeViewController: UIViewController,UITextFieldDelegate,UIScrollViewDeleg
         
         nicknameTextField.delegate = self
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         socket = appDelegate.socket as SocketIOClient
         
         socket.on("created_c"){ (data,ack) in
@@ -108,9 +109,13 @@ class HomeViewController: UIViewController,UITextFieldDelegate,UIScrollViewDeleg
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if sender is UIButton {
             if segue.identifier == "MakeGroup" {
-                let viewController = segue.destinationViewController as! MakeGroupViewController
+                self.appDelegate.name = nicknameTextField.text!
                 
+                let viewController = segue.destinationViewController as! MakeGroupViewController
+
             }else if segue.identifier == "JoinGroup" {
+                self.appDelegate.name = nicknameTextField.text!
+                
                 let viewController = segue.destinationViewController as! JoinGroupViewController
                 viewController.nickname = self.nicknameTextField.text!
                 

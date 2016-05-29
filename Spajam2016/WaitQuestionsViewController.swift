@@ -23,7 +23,7 @@ class WaitQuestionsViewController: UIViewController {
         socket.on("question_from_server"){ (data,ack) in
             let str = data
             self.questionStr = str
-            self.performSegueWithIdentifier("WaitQuestions", sender: "")
+            self.performSegueWithIdentifier("Questions", sender: "")
         }
         
         // Do any additional setup after loading the view.

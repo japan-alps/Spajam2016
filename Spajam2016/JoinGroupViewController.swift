@@ -101,7 +101,7 @@ class JoinGroupViewController: UIViewController,UITextFieldDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let viewController = segue.destinationViewController as! WaitParticipateViewController
-        
+        viewController.nickname = self.nickname
     }
     
     

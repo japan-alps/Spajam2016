@@ -33,6 +33,7 @@ class MakeGroupViewController: UIViewController,UITextFieldDelegate {
          appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         socket = appDelegate.socket as SocketIOClient
         
+        self.player1Label.text = "かのう"
         
         socket.on("created_j"){ (data,ack) in
             let str = data
