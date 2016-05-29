@@ -9,7 +9,7 @@
 import UIKit
 import SocketIOClientSwift
 
-class JoinGroupViewController: UIViewController {
+class JoinGroupViewController: UIViewController,UITextFieldDelegate{
 
     var socket : SocketIOClient!
     private var txtActiveField = UITextField()
