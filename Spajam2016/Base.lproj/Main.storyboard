@@ -232,7 +232,6 @@
         <!--Drawing View Controller-->
         <scene sceneID="aQC-lZ-sLP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U9z-Pe-oHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="xhY-sv-oos" customClass="DrawingViewController" customModule="Spajam2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="do4-wu-ejC"/>
@@ -292,6 +291,7 @@
                         <segue destination="ieJ-NU-mgz" kind="show" action="showDetailViewController:sender:" id="pfU-4m-v7L"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9z-Pe-oHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2670.5" y="399.5"/>
         </scene>
@@ -539,6 +539,10 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dsp-vl-vJr" appends="YES" id="SkN-0X-Oh4"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="questionTextView" destination="Yg1-9X-LrB" id="qIh-W1-FYl"/>
@@ -547,6 +551,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Go9-f1-Wp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dsp-vl-vJr">
+                    <connections>
+                        <action selector="TapScreen:" destination="x2Q-ZC-uRr" id="Ozv-Hg-Jfa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1102.5" y="1061.5"/>
         </scene>
@@ -748,7 +757,7 @@
         <image name="questionsend_button.png" width="892" height="304"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sli-Rv-bJU"/>
+        <segue reference="x0t-bq-j57"/>
         <segue reference="pfU-4m-v7L"/>
     </inferredMetricsTieBreakers>
 </document>
