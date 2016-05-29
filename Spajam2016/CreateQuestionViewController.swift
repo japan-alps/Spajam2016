@@ -9,7 +9,7 @@
 import UIKit
 import SocketIOClientSwift
 
-class CreateQuestionViewController: UIViewController,UITextFieldDelegate,UIScrollViewDelegate {
+class CreateQuestionViewController: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
     
     var socket : SocketIOClient!
     private var txtActiveField = UITextView()
@@ -24,6 +24,8 @@ class CreateQuestionViewController: UIViewController,UITextFieldDelegate,UIScrol
         
         sc.frame = self.view.frame
         sc.delegate = self
+        
+        questionTextView.delegate = self
         
         questionTextView.layer.borderWidth = 1
         questionTextView.layer.borderColor = UIColor.lightGrayColor().CGColor

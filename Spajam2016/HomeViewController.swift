@@ -26,6 +26,8 @@ class HomeViewController: UIViewController,UITextFieldDelegate,UIScrollViewDeleg
         sc.frame = self.view.frame
         sc.delegate = self
         
+        nicknameTextField.delegate = self
+        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         socket = appDelegate.socket as SocketIOClient
         

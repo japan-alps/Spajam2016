@@ -19,6 +19,8 @@ class JoinGroupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        idTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -81,6 +83,7 @@ class JoinGroupViewController: UIViewController {
     }
     
     @IBAction func joinGroup(sender: AnyObject) {
+        socket.emit("create_j","0")
         performSegueWithIdentifier("WaitParticipate", sender: sender)
     }
     

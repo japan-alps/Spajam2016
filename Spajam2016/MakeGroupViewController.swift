@@ -9,7 +9,7 @@
 import UIKit
 import SocketIOClientSwift
 
-class MakeGroupViewController: UIViewController {
+class MakeGroupViewController: UIViewController,UITextFieldDelegate {
     
     var socket : SocketIOClient!
     
