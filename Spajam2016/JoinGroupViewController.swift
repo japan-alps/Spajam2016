@@ -17,11 +17,21 @@ class JoinGroupViewController: UIViewController,UITextFieldDelegate{
     @IBOutlet var sc: UIScrollView!
     @IBOutlet weak var idTextField: UITextField!
     
+    var nickname:String = ""
+    var appDelegate : AppDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        socket = appDelegate.socket as SocketIOClient
+        
         idTextField.delegate = self
-
+        
+        socket.on("created_j"){ (data,ack) in
+            
+        self.performSegueWithIdentifier("WaitParticipate", sender: "")
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -74,6 +84,8 @@ class JoinGroupViewController: UIViewController,UITextFieldDelegate{
         sc.contentOffset.y = 0
     }
     
+    
+    
     /*
      Returnをタップするとキーボードを閉じる
      */
@@ -83,8 +95,7 @@ class JoinGroupViewController: UIViewController,UITextFieldDelegate{
     }
     
     @IBAction func joinGroup(sender: AnyObject) {
-        socket.emit("create_j","0")
-        performSegueWithIdentifier("WaitParticipate", sender: sender)
+        self.socket.emit("join_room",self.nickname)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

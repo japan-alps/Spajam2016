@@ -101,7 +101,6 @@ class HomeViewController: UIViewController,UITextFieldDelegate,UIScrollViewDeleg
     }
     
     @IBAction func joinGroupAction(sender: AnyObject) {
-        self.socket.emit("join_room",nicknameTextField.text!)
         performSegueWithIdentifier("JoinGroup", sender: sender)
     }
     
@@ -113,6 +112,7 @@ class HomeViewController: UIViewController,UITextFieldDelegate,UIScrollViewDeleg
                 
             }else if segue.identifier == "JoinGroup" {
                 let viewController = segue.destinationViewController as! JoinGroupViewController
+                viewController.nickname = self.nicknameTextField.text!
                 
             }
         }
