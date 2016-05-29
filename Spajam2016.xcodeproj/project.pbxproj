@@ -14,6 +14,7 @@
 		0D692B6A1CFA25FA00268782 /* AnswerSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D692B691CFA25FA00268782 /* AnswerSelectViewController.swift */; };
 		0D692B6C1CFA261D00268782 /* PlayerWaitAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D692B6B1CFA261D00268782 /* PlayerWaitAnswerViewController.swift */; };
 		0D692B6E1CFA266000268782 /* CheckAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D692B6D1CFA266000268782 /* CheckAnswerViewController.swift */; };
+		0D6D5EE81CFA89AE004B470F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6D5EE71CFA89AE004B470F /* SwiftyJSON.swift */; };
 		0DC1F4F11CF9FC960049AFC6 /* batu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC1F4D41CF9FC960049AFC6 /* batu.png */; };
 		0DC1F4F21CF9FC960049AFC6 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC1F4D51CF9FC960049AFC6 /* clear.png */; };
 		0DC1F4F31CF9FC960049AFC6 /* eraser.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC1F4D61CF9FC960049AFC6 /* eraser.png */; };
@@ -85,6 +86,7 @@
 		0D692B691CFA25FA00268782 /* AnswerSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerSelectViewController.swift; sourceTree = "<group>"; };
 		0D692B6B1CFA261D00268782 /* PlayerWaitAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerWaitAnswerViewController.swift; sourceTree = "<group>"; };
 		0D692B6D1CFA266000268782 /* CheckAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAnswerViewController.swift; sourceTree = "<group>"; };
+		0D6D5EE71CFA89AE004B470F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		0DC1F4D41CF9FC960049AFC6 /* batu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batu.png; sourceTree = "<group>"; };
 		0DC1F4D51CF9FC960049AFC6 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
 		0DC1F4D61CF9FC960049AFC6 /* eraser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser.png; sourceTree = "<group>"; };
@@ -260,17 +262,18 @@
 				0DC1F5101CFA02C20049AFC6 /* JoinGroupViewController.swift */,
 				0D692B6B1CFA261D00268782 /* PlayerWaitAnswerViewController.swift */,
 				0DC1F5121CFA0AF80049AFC6 /* CreateQuestionViewController.swift */,
+				0D6D5EE71CFA89AE004B470F /* SwiftyJSON.swift */,
+				0D692B631CFA1E9300268782 /* WaitQuestionsViewController.swift */,
 				0DC1F5141CFA0EC20049AFC6 /* QuestionsViewController.swift */,
 				0D692B611CFA1E6800268782 /* WaitParticipateViewController.swift */,
-				0D692B631CFA1E9300268782 /* WaitQuestionsViewController.swift */,
 				0D692B651CFA20A400268782 /* DrawingViewController.swift */,
 				0D692B671CFA20D600268782 /* MasterMonitorViewController.swift */,
 				0D692B6D1CFA266000268782 /* CheckAnswerViewController.swift */,
+				0D692B691CFA25FA00268782 /* AnswerSelectViewController.swift */,
 				8FCA1F8E1CF991F10066DE69 /* Main.storyboard */,
 				8FCA1F911CF991F10066DE69 /* Assets.xcassets */,
 				8FCA1F931CF991F10066DE69 /* LaunchScreen.storyboard */,
 				8FCA1F961CF991F10066DE69 /* Info.plist */,
-				0D692B691CFA25FA00268782 /* AnswerSelectViewController.swift */,
 			);
 			path = Spajam2016;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				0DC1F5111CFA02C20049AFC6 /* JoinGroupViewController.swift in Sources */,
 				0D692B6A1CFA25FA00268782 /* AnswerSelectViewController.swift in Sources */,
 				0D692B641CFA1E9300268782 /* WaitQuestionsViewController.swift in Sources */,
+				0D6D5EE81CFA89AE004B470F /* SwiftyJSON.swift in Sources */,
 				0DC1F50F1CFA02970049AFC6 /* MakeGroupViewController.swift in Sources */,
 				0DC1F5151CFA0EC20049AFC6 /* QuestionsViewController.swift in Sources */,
 				0D692B661CFA20A400268782 /* DrawingViewController.swift in Sources */,

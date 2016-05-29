@@ -32,6 +32,10 @@ class JoinGroupViewController: UIViewController {
         socket.emit("question_from_client",idTextField.text!)
     }
     
+    @IBAction func TextFieldEditingDidBegin(sender: AnyObject) {
+        txtActiveField = sender as! UITextField
+    }
+    
     /*
      キーボード以外をタップするとキーボードを閉じる
      */
@@ -82,7 +86,7 @@ class JoinGroupViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let viewController = segue.destinationViewController as! CreateQuestionViewController
+        let viewController = segue.destinationViewController as! WaitParticipateViewController
         
     }
     

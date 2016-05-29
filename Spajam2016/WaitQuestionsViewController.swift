@@ -7,20 +7,40 @@
 //
 
 import UIKit
+import SocketIOClientSwift
 
 class WaitQuestionsViewController: UIViewController {
 
+    var socket : SocketIOClient!
+    var questionStr:NSArray!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        socket = appDelegate.socket as SocketIOClient
+        
+        socket.on("question_from_server"){ (data,ack) in
+            let str = data
+            self.questionStr = str
+            self.performSegueWithIdentifier("WaitQuestions", sender: "")
+        }
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let viewController = segue.destinationViewController as! QuestionsViewController
+        viewController.questionStr = questionStr[0] as! String
+        viewController.flag = false
+        
+    }
 
     /*
     // MARK: - Navigation

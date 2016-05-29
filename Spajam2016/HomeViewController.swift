@@ -52,6 +52,10 @@ class HomeViewController: UIViewController,UITextFieldDelegate,UIScrollViewDeleg
         self.view.endEditing(true)
     }
     
+    @IBAction func TextFieldEditingDidBegin(sender: AnyObject) {
+        txtActiveField = sender as! UITextField
+    }
+    
     /*
      キーボード表示時にテキストフィールドと重なっているか調べる
      重なっていたらスクロールする
@@ -102,10 +106,10 @@ class HomeViewController: UIViewController,UITextFieldDelegate,UIScrollViewDeleg
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if sender is UIButton {
-            if segue == "MakeGroup" {
+            if segue.identifier == "MakeGroup" {
                 let viewController = segue.destinationViewController as! MakeGroupViewController
-                viewController.player1Label.text = nicknameTextField.text!
-            }else if segue == "JoinGroup" {
+                
+            }else if segue.identifier == "JoinGroup" {
                 let viewController = segue.destinationViewController as! JoinGroupViewController
                 
             }

@@ -51,11 +51,18 @@
                                         <rect key="frame" x="289" y="173" width="206" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="TextFieldEditingDidBegin:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="fNg-Yg-DMP"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="l1r-Qm-hOc" appends="YES" id="GQY-6d-55P"/>
+                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -65,10 +72,15 @@
                         <outlet property="nicknameTextField" destination="CCt-mA-9og" id="RI4-9r-yA6"/>
                         <outlet property="sc" destination="epO-fM-ZuT" id="pDt-Oj-Zy0"/>
                         <segue destination="gVG-wE-xi6" kind="show" identifier="MakeGroup" id="hXo-0p-du8"/>
-                        <segue destination="Ego-Qz-RXP" kind="show" id="6e7-zd-HIy"/>
+                        <segue destination="Ego-Qz-RXP" kind="show" identifier="JoinGroup" id="6e7-zd-HIy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="l1r-Qm-hOc">
+                    <connections>
+                        <action selector="TapScreen:" destination="BYZ-38-t0r" id="YDl-jI-1U6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="324.5" y="376.5"/>
         </scene>
@@ -114,6 +126,9 @@
                                         <rect key="frame" x="278" y="126" width="150" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="TextFieldEditingDidBegin:" destination="Ego-Qz-RXP" eventType="editingDidEnd" id="Rt1-qZ-ZW9"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </scrollView>
@@ -122,9 +137,8 @@
                     </view>
                     <connections>
                         <outlet property="idTextField" destination="iNu-Mz-e3b" id="VRL-DY-qFv"/>
-                        <outlet property="joinGroup" destination="NWo-Rc-sEh" id="8LX-FZ-mcb"/>
                         <outlet property="sc" destination="jcq-V1-XMa" id="pNj-NQ-jrI"/>
-                        <segue destination="NsL-YV-4ul" kind="show" id="o2s-Vc-Ibe"/>
+                        <segue destination="NsL-YV-4ul" kind="show" identifier="WaitParticipate" id="o2s-Vc-Ibe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HmD-VQ-KpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -659,19 +673,19 @@
                                 <color key="textColor" red="0.41568627450000001" green="0.73725490199999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkK-1Z-ysU">
-                                <rect key="frame" x="283" y="170" width="101" height="36"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UZN-U5-bnU">
+                                <rect key="frame" x="116" y="72" width="434" height="261"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="questionLabel" destination="EkK-1Z-ysU" id="DuZ-uD-DJy"/>
+                        <outlet property="questionsTextView" destination="UZN-U5-bnU" id="62C-Yt-f6H"/>
                         <segue destination="YuC-vS-GwV" kind="show" identifier="MasterMonitoring" id="glC-Uk-anb"/>
-                        <segue destination="xhY-sv-oos" kind="show" id="4Mb-32-ITC"/>
+                        <segue destination="xhY-sv-oos" kind="show" identifier="AnswerDrawing" id="4Mb-32-ITC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rw-7U-NH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -825,10 +839,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="player1Image" destination="Pc6-9B-efr" id="dL5-py-msH"/>
                         <outlet property="player1Label" destination="Nyl-I1-V1v" id="gdD-kx-fGY"/>
+                        <outlet property="player2Image" destination="xIQ-zf-mY2" id="WoY-o4-PiB"/>
                         <outlet property="player2Label" destination="fAd-BE-I91" id="GJm-Q8-HRb"/>
+                        <outlet property="player3Image" destination="QTh-10-cH9" id="DlY-b2-Yf7"/>
                         <outlet property="player3Label" destination="hga-fs-AVu" id="RNP-Wm-mqE"/>
+                        <outlet property="player4Image" destination="zAi-nD-5NA" id="aBC-Nw-xv1"/>
                         <outlet property="player4Label" destination="m4y-SE-c1w" id="GPO-yD-Wjg"/>
+                        <outlet property="player5Image" destination="gRN-QE-59j" id="gpj-Ub-BSY"/>
                         <outlet property="player5Label" destination="xJx-98-l4e" id="C7w-60-ebs"/>
                         <segue destination="x2Q-ZC-uRr" kind="show" identifier="CreateQuestion" id="LEw-i4-CEg"/>
                     </connections>
@@ -856,7 +875,7 @@
         <image name="questionsend_button.png" width="892" height="304"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sli-Rv-bJU"/>
+        <segue reference="x0t-bq-j57"/>
         <segue reference="xie-Ry-4np"/>
     </inferredMetricsTieBreakers>
 </document>

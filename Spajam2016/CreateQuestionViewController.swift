@@ -10,14 +10,14 @@ import UIKit
 import SocketIOClientSwift
 
 class CreateQuestionViewController: UIViewController,UITextFieldDelegate,UIScrollViewDelegate {
-
+    
     var socket : SocketIOClient!
-    private var txtActiveField = UITextField()
+    private var txtActiveField = UITextView()
     
     @IBOutlet weak var questionTextView: UITextView!
     @IBOutlet var sc: UIScrollView!
     
-    var questionStr:String = ""
+    var questionStr:NSArray!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,33 +27,40 @@ class CreateQuestionViewController: UIViewController,UITextFieldDelegate,UIScrol
         
         questionTextView.layer.borderWidth = 1
         questionTextView.layer.borderColor = UIColor.lightGrayColor().CGColor
-
+        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         socket = appDelegate.socket as SocketIOClient
         
-        socket.on("question_from_server"){ (data,ack) in
-            let str = data
-            self.questionStr = str as! String
-        }
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func sendQuestion(sender: AnyObject) {
+        socket.on("question_from_server"){ (data,ack) in
+            let str = data
+            self.questionStr = str
+            self.performSegueWithIdentifier("MasterQuestions", sender: sender)
+        }
+        
         socket.emit("question_from_client",questionTextView.text!)
-        performSegueWithIdentifier("MasterQuestions", sender: sender)
-
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-                let viewController = segue.destinationViewController as! QuestionsViewController
-        viewController.questionStr = questionStr
+        let viewController = segue.destinationViewController as! QuestionsViewController
+        viewController.questionStr = questionStr[0] as! String
+        viewController.flag = true
     }
-
+    
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool{
+        txtActiveField = textView
+        return true
+    }
+    
     /*
      キーボード以外をタップするとキーボードを閉じる
      */
@@ -91,13 +98,13 @@ class CreateQuestionViewController: UIViewController,UITextFieldDelegate,UIScrol
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

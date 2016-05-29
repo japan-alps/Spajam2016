@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import SocketIOClientSwift
 
 class WaitParticipateViewController: UIViewController {
 
+    var socket : SocketIOClient!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        socket = appDelegate.socket as SocketIOClient
+    
+        socket.on("member_request"){ (data,ack) in
+            let str = data
+            self.performSegueWithIdentifier("WaitQuestions", sender: "")
+        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +32,12 @@ class WaitParticipateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       
+            let viewController = segue.destinationViewController as! WaitQuestionsViewController
+       
+    }
+    
     /*
     // MARK: - Navigation
 

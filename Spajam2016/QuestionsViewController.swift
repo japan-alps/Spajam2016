@@ -10,49 +10,59 @@ import UIKit
 import SocketIOClientSwift
 
 class QuestionsViewController: UIViewController {
-
-    var socket : SocketIOClient!
     
-    @IBOutlet weak var questionLabel: UILabel!
+    var socket : SocketIOClient!
+    var flag = true
+    
+    @IBOutlet weak var questionsTextView: UITextView!
+    
     var questionStr:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         socket = appDelegate.socket as SocketIOClient
         
-        questionLabel.text = questionStr
+        questionsTextView.text = questionStr
         
         //タイマーを作る.
         
         NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "changeView:", userInfo: nil, repeats: false)
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func changeView(){
-        performSegueWithIdentifier("MasterQuestions", sender: "")
+    @objc func changeView(timer: NSTimer){
+        if(flag == true){
+            performSegueWithIdentifier("MasterMonitoring", sender: "")
+        }else{
+            performSegueWithIdentifier("AnswerDrawing", sender: "")
+        }
     }
-
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let viewController = segue.destinationViewController as! QuestionsViewController
+        if(segue.identifier ==  "MasterMonitoring"){
+            let viewController = segue.destinationViewController as! MasterMonitorViewController
+        }else {
+            let viewController = segue.destinationViewController as! DrawingViewController
+        }
     }
-
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
